@@ -8,7 +8,7 @@
   --border: #dde3ea;
   --ink: #0b1420;
   --max: 1080px;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,7 +32,7 @@ body {
 a { color: var(--accent); }
 img { display: block; max-width: 100%; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; font-variant-ligatures: no-common-ligatures no-discretionary-ligatures; }
 
 /* Header sits on top of the hero photo */
 header.site {
