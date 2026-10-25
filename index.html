@@ -19,11 +19,14 @@
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="/"><img src="/favicon.svg" alt="">Winter Ridge Ventures</a>
+      <a class="brand" href="/" aria-label="Winter Ridge Ventures home">
+        <svg class="mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 25 L13 9 L19 17 L26 5 L38 25"/><path d="M10.2 13 L13 9 L15.6 12.5 M23.4 9.4 L26 5 L28.8 9.6"/><path d="M2 25 H38" opacity=".55"/></svg>
+        <span class="wordmark"><span class="wm-main">Winter Ridge</span><span class="wm-sub">Ventures</span></span>
+      </a>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -31,7 +34,7 @@
   <main>
     <div class="hero">
       <div class="wrap">
-        <p class="eyebrow">Winter Ridge Ventures LLC</p>
+        <p class="eyebrow">Pittsburgh, Pennsylvania</p>
         <h1>Practical software, built carefully in America.</h1>
         <p class="lead">We build and run focused software products. Each one solves a specific problem well, respects the people who use it, and does exactly what it says.</p>
         <a class="btn" href="#projects">See our projects</a><a class="btn ghost" href="#contact">Get in touch</a>
@@ -129,6 +132,11 @@
       <p class="credits">Photos courtesy of <a href="#about">our Unsplash photographers</a>.</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const header = document.querySelector('header.site');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  </script>
 </body>
 </html>
