@@ -1,0 +1,75 @@
+:root {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --text: #1b2430;
+  --muted: #5a6778;
+  --accent: #1f3a5f;
+  --accent-soft: #e3ebf4;
+  --border: #dde3ea;
+  --max: 960px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f151d;
+    --surface: #17202b;
+    --text: #e6ebf1;
+    --muted: #9aa7b6;
+    --accent: #9fc0e6;
+    --accent-soft: #1d2b3b;
+    --border: #273444;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 650; }
+.brand img { width: 32px; height: 32px; }
+nav a { margin-left: 18px; text-decoration: none; color: var(--muted); font-size: 15px; }
+nav a:first-child { margin-left: 0; }
+nav a:hover { color: var(--accent); }
+
+.hero { padding: 72px 0 56px; }
+.hero h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+.hero p { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+
+section { padding: 40px 0; }
+section h2 { font-size: 26px; margin: 0 0 16px; }
+section > .wrap > p { max-width: 680px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 24px; display: flex; flex-direction: column;
+}
+.card h3 { margin: 0 0 4px; font-size: 21px; }
+.card .tag {
+  display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent);
+  background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; margin-bottom: 12px;
+  align-self: flex-start;
+}
+.card p { margin: 0 0 16px; color: var(--muted); }
+.card .link { margin-top: auto; font-weight: 600; text-decoration: none; }
+.card .link:hover { text-decoration: underline; }
+.card.placeholder { border-style: dashed; background: transparent; }
+
+footer {
+  border-top: 1px solid var(--border); margin-top: 40px; padding: 24px 0 40px;
+  color: var(--muted); font-size: 14px;
+}
+footer p { margin: 4px 0; }
