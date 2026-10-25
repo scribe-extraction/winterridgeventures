@@ -4,12 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Winter Ridge Ventures</title>
-  <meta name="description" content="Winter Ridge Ventures LLC builds and runs small software products, starting with ScribeEx.">
+  <meta name="description" content="Winter Ridge Ventures LLC is an American company that builds and runs focused software products, starting with ScribeEx.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/style.css">
+  <link rel="preload" as="image" href="/images/hero.jpg">
   <meta property="og:title" content="Winter Ridge Ventures">
-  <meta property="og:description" content="Winter Ridge Ventures LLC builds and runs small software products, starting with ScribeEx.">
+  <meta property="og:description" content="An American company building focused, privacy-minded software.">
   <meta property="og:url" content="https://winterridgeventures.com/">
+  <meta property="og:image" content="https://winterridgeventures.com/images/hero.jpg">
 </head>
 <body>
   <header class="site">
@@ -26,41 +31,73 @@
   <main>
     <div class="hero">
       <div class="wrap">
-        <h1>Practical software, built carefully.</h1>
-        <p>Winter Ridge Ventures LLC is a small Pennsylvania company that builds and runs focused software products. Each one solves a specific problem well.</p>
+        <p class="eyebrow">Winter Ridge Ventures LLC</p>
+        <h1>Practical software, built carefully in America.</h1>
+        <p class="lead">We build and run focused software products. Each one solves a specific problem well, respects the people who use it, and does exactly what it says.</p>
+        <a class="btn" href="#projects">See our projects</a><a class="btn ghost" href="#contact">Get in touch</a>
       </div>
+      <span class="credit-tag" id="hero-caption">HERO_CAPTION</span>
     </div>
 
     <section id="about">
-      <div class="wrap">
-        <h2>About</h2>
-        <p>Winter Ridge Ventures LLC is the parent company for a growing set of independent projects. Some products operate under their own names as trade names (DBAs) of the company. We favor simple tools, privacy by design, and software that does what it says.</p>
+      <div class="wrap split">
+        <div>
+          <p class="kicker">About</p>
+          <h2>A Pennsylvania company with a long view.</h2>
+          <p>Winter Ridge Ventures LLC is the parent company for a growing set of independent projects. Some products operate under their own names as trade names of the company, so each one can have its own identity while sharing the same standards.</p>
+          <p>We favor simple tools, privacy by design, and software that earns its place on your device. We'd rather ship one thing that works well than ten that almost do.</p>
+          <div class="facts">
+            <div><strong>Pennsylvania</strong><span>Limited liability company</span></div>
+            <div><strong>2026</strong><span>Founded</span></div>
+            <div><strong>Privacy first</strong><span>In every product</span></div>
+          </div>
+        </div>
+        <figure>
+          <img src="/images/about.jpg" alt="ABOUT_ALT" loading="lazy">
+          <figcaption>ABOUT_CAPTION</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <h2>Projects</h2>
+        <p class="kicker">Projects</p>
+        <h2>What we're building</h2>
         <div class="cards">
           <article class="card">
-            <span class="tag">In development</span>
-            <h3>ScribeEx</h3>
-            <p>Turn code shown on a screen you can't connect to into a checked text file, using only a phone camera and a browser. Photos are encrypted on the phone, and reading and checking happen in your own browser.</p>
-            <a class="link" href="https://scribeex.com">Visit scribeex.com &rarr;</a>
+            <div class="body">
+              <span class="tag">In development</span>
+              <h3>ScribeEx</h3>
+              <p>Turn code shown on a screen you can't connect to into a checked text file, using only a phone camera and a browser. Photos are encrypted on the phone, and reading and checking happen in your own browser.</p>
+              <a class="link" href="https://scribeex.com">Visit scribeex.com &rarr;</a>
+            </div>
           </article>
           <article class="card placeholder">
-            <span class="tag">Coming later</span>
-            <h3>More to come</h3>
-            <p>New projects will be listed here as they launch.</p>
+            <div class="body">
+              <span class="tag">Coming later</span>
+              <h3>More to come</h3>
+              <p>New projects will be listed here as they launch.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="landmarks">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>For questions about the company or any of its products, email <a href="mailto:contact@winterridgeventures.com">contact@winterridgeventures.com</a>.</p>
+        <p class="kicker">Inspired by</p>
+        <h2>Built to last, like the places we admire.</h2>
+        <div class="gallery">
+GALLERY
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="band">
+      <div class="wrap">
+        <h2>Let's talk</h2>
+        <p>Questions about the company or any of its products? We read every message.</p>
+        <a class="btn" href="mailto:support@WinterRidgeVentures.com">support@WinterRidgeVentures.com</a>
       </div>
     </section>
   </main>
@@ -69,6 +106,7 @@
     <div class="wrap">
       <p>&copy; <span id="year">2026</span> Winter Ridge Ventures LLC. Pennsylvania, USA.</p>
       <p>ScribeEx is a trade name of Winter Ridge Ventures LLC.</p>
+      <p class="credits">CREDITS</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
