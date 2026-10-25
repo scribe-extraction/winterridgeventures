@@ -108,6 +108,7 @@ figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; }
 .card p { margin: 0 0 18px; color: var(--muted); }
 .card .link { margin-top: auto; font-weight: 600; text-decoration: none; }
 .card .link:hover { text-decoration: underline; }
+.card .link.muted { color: var(--muted); font-weight: 600; }
 .card.placeholder { border-style: dashed; background: transparent; }
 
 /* Landmark gallery */
